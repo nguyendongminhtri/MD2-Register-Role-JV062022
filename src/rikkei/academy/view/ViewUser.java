@@ -81,6 +81,7 @@ public class ViewUser {
         Set<String> strRoles = new HashSet<>();
         strRoles.add(role);
         SignUpDTO signUpDTO = new SignUpDTO(id, name, username,email,password,strRoles);
+        //Lấy đối tượng message từ Controller đổ về để check validate các trường hợp trùng lặp trong database
         ResponseMessenger check_existed = userController.register(signUpDTO);
         //IN RA MÀU CHO System.out -> màu vàng a e tìm hiểu thêm in màu khác nhé
           final String ANSI_RESET = "\u001B[0m";
